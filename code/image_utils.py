@@ -231,12 +231,12 @@ def moveVolumes(subject_dir, sizes_dir, fr):
               .format(subject_dir, fr))
     
     os.system('cp '
-              '{0}/seg_lvsa_{2}.nii.gz '
+              '{0}/segs/seg_lvsa_{2}.nii.gz '
               '{1}/2D_segmentation_{2}.nii.gz'
               .format(subject_dir, sizes_dir, fr))
     
     os.system('rm '
-              '{0}/seg_lvsa_{1}.nii.gz '
+              '{0}/segs/seg_lvsa_{1}.nii.gz '
               .format(subject_dir, fr))
     
     os.system('cp '
