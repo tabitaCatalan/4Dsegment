@@ -44,12 +44,12 @@ def track_cine(data_dir, par_dir, tamplate_dir):
         for k in range(1, fr+1):
             dof = '{0}/ffd_{1:02d}_to_{2:02d}.dof.gz'.format(motion_dir, k-1, k)
             dofs += dof + ' '
-            dof_out = '{0}/ffd_comp_00_to_{1:02d}.dof.gz'.format(motion_dir, fr)
-            if not os.path.exists(dof_out):
+        dof_out = '{0}/ffd_comp_00_to_{1:02d}.dof.gz'.format(motion_dir, fr)
+        if not os.path.exists(dof_out):
                 os.system('mirtk compose-dofs '
-                          '{0} '
-                          '{1}'
-                          .format(dofs, dof_out))
+                      '{0} '
+                      '{1}'
+                      .format(dofs, dof_out))
 
     # Refine motion fields
     # Composition of inter-frame motion fields can lead to accumulative errors. At this step, we refine the motion fields
