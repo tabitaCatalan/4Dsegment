@@ -91,3 +91,6 @@ If you find this software useful for your project or research. Please give some 
 
 [2] Bello GA, Dawes TJW, Duan J, Biffi C, de Marvao A, Howard LSGE, Gibbs JSR, Wilkins MR, Cook SA, Rueckert D, O'Regan DP. Deep learning cardiac motion analysis for human survival prediction. *[Nature Machine Intelligence](https://doi.org/10.1038/s42256-019-0019-2)* 1, 95–104 (2019).
 
+# NOTA: 
+
+Se debe ejecutar el archivo `DMACS.py`, se modificó solo para que hiciera el preprocesamiento y la estimación de movimiento.
