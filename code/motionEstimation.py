@@ -70,55 +70,55 @@ def track_cine(data_dir, par_dir, tamplate_dir):
                       .format(target, source, par, dofin, dof))
 
     # Obtain the RV mesh with the same number of points as the template mesh
-    os.system('srreg '
-              '{2}/vtks/RV_ED.vtk '
-              '{0}/RVendo_ED.vtk '
-              '-dofout {1}/RV_srreg.dof.gz '
-              '-symmetric'
-              .format(tamplate_dir, motion_dir, data_dir))
+    #os.system('srreg '
+    #          '{2}/vtks/RV_ED.vtk '
+    #          '{0}/RVendo_ED.vtk '
+    #          '-dofout {1}/RV_srreg.dof.gz '
+    #          '-symmetric'
+    #          .format(tamplate_dir, motion_dir, data_dir))
     
-    os.system('mirtk transform-points '
-              '{0}/RVendo_ED.vtk '
-              '{1}/RV_ED_srreg.vtk '
-              '-dofin {1}/RV_srreg.dof.gz '
-              '-invert'
-              .format(tamplate_dir, motion_dir))
+    #os.system('mirtk transform-points '
+    #          '{0}/RVendo_ED.vtk '
+    #          '{1}/RV_ED_srreg.vtk '
+    #          '-dofin {1}/RV_srreg.dof.gz '
+    #          '-invert'
+    #          .format(tamplate_dir, motion_dir))
     
-    os.system('sareg '
-              '{0}/RV_ED_srreg.vtk '
-              '{1}/vtks/RV_ED.vtk '
-              '-dofout {0}/RV_sareg.dof.gz '
-              '-symmetric'
-              .format(motion_dir, data_dir))
+    #os.system('sareg '
+    #          '{0}/RV_ED_srreg.vtk '
+    #          '{1}/vtks/RV_ED.vtk '
+    #          '-dofout {0}/RV_sareg.dof.gz '
+    #          '-symmetric'
+    #          .format(motion_dir, data_dir))
     
-    os.system('snreg '
-              '{0}/RV_ED_srreg.vtk '
-              '{1}/vtks/RV_ED.vtk '
-              '-dofin {0}/RV_sareg.dof.gz '
-              '-dofout {0}/RV_snreg.dof.gz '
-              '-ds 20 -symmetric'
-              .format(motion_dir, data_dir))
+    #os.system('snreg '
+    #          '{0}/RV_ED_srreg.vtk '
+    #          '{1}/vtks/RV_ED.vtk '
+    #          '-dofin {0}/RV_sareg.dof.gz '
+    #          '-dofout {0}/RV_snreg.dof.gz '
+    #          '-ds 20 -symmetric'
+    #          .format(motion_dir, data_dir))
     
-    os.system('mirtk transform-points '
-              '{0}/RV_ED_srreg.vtk '
-              '{0}/RV_fr00.vtk '
-              '-dofin {0}/RV_snreg.dof.gz'
-              .format(motion_dir))
+    #os.system('mirtk transform-points '
+    #          '{0}/RV_ED_srreg.vtk '
+    #          '{0}/RV_fr00.vtk '
+    #          '-dofin {0}/RV_snreg.dof.gz'
+    #          .format(motion_dir))
 
     # Transform the mesh
-    for fr in range(1, n_frame):
-        os.system('mirtk transform-points '
-                  '{0}/RV_fr00.vtk '
-                  '{0}/RV_fr{1:02d}.vtk '
-                  '-dofin {0}/ffd_00_to_{1:02d}.dof.gz'
-                  .format(motion_dir, fr))
+    #for fr in range(1, n_frame):
+    #    os.system('mirtk transform-points '
+    #              '{0}/RV_fr00.vtk '
+    #              '{0}/RV_fr{1:02d}.vtk '
+    #              '-dofin {0}/ffd_00_to_{1:02d}.dof.gz'
+    #              .format(motion_dir, fr))
      
     # Convert vtks to text files
-    for fr in range(0, n_frame):
-        os.system('vtk2txt '
-                  '{0}/RV_fr{1:02d}.vtk '
-                  '{0}/RV_fr{1:02d}.txt'
-                  .format(motion_dir, fr))
+    #for fr in range(0, n_frame):
+    #    os.system('vtk2txt '
+    #              '{0}/RV_fr{1:02d}.vtk '
+    #              '{0}/RV_fr{1:02d}.txt'
+    #              .format(motion_dir, fr))
 
 
 def apply_PC(subject, data_dir, param_dir, template_dir):
