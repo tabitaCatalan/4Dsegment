@@ -42,15 +42,15 @@ if __name__ == '__main__':
 
         deeplearningseg(FLAGS.model_path, FLAGS.test_dir, FLAGS.atlas_dir)
                  
-        # multiatlasreg2D(FLAGS.test_dir, FLAGS.atlas_dir, FLAGS.param_dir, FLAGS.coreNo, True, FLAGS.irtk) # parallel, irtk
+        # # multiatlasreg2D(FLAGS.test_dir, FLAGS.atlas_dir, FLAGS.param_dir, FLAGS.coreNo, True, FLAGS.irtk) # parallel, irtk
 
-        multiatlasreg3D(FLAGS.test_dir, FLAGS.atlas_dir, FLAGS.param_dir, FLAGS.coreNo, True, FLAGS.irtk) # parallel, irtk
+        # multiatlasreg3D(FLAGS.test_dir, FLAGS.atlas_dir, FLAGS.param_dir, FLAGS.coreNo, True, FLAGS.irtk) # parallel, irtk
 
-        meshCoregstration(FLAGS.test_dir, FLAGS.param_dir, FLAGS.template_dir, FLAGS.coreNo, True, False) # parallel, irtk
+        # meshCoregstration(FLAGS.test_dir, FLAGS.param_dir, FLAGS.template_dir, FLAGS.coreNo, True, False) # parallel, irtk
 
         motionTracking(FLAGS.test_dir, FLAGS.param_dir, FLAGS.template_PH, FLAGS.coreNo, True) # parallel
         
-        decimate(FLAGS.test_dir, FLAGS.coreNo, False) 
+        # decimate(FLAGS.test_dir, FLAGS.coreNo, False) 
 
         process_time = time.time() - start_time 
         print('Including image I/O, CUDA resource allocation, '
