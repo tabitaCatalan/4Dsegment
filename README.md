@@ -1,5 +1,9 @@
 # Deep learning cardiac segmentation and motion tracking (4D*segment*) (práctica Yeniffer)[![DOI](https://zenodo.org/badge/177131553.svg)](https://zenodo.org/badge/latestdoi/177131553)
 
+# NOTA: 
+
+Se debe ejecutar el archivo `DMACS.py`, se modificó solo para que hiciera el preprocesamiento y la estimación de movimiento sin errores. Para esto debe ubicarse la imágen a probar dentro del directorio `data/subject_?`, si desea probar varias al tiro, crear carpetas para varios sujetos al tiro. La imágen debe estar en formato `.nii` y ser 4D, con tercera coordenada el corte y cuarta el tiempo.
+
 ![](data/screen.gif)
 :--:
 *Motion tracking using our pipeline. Left: without shape refinement; Right: with shape refinement* 
@@ -91,6 +95,3 @@ If you find this software useful for your project or research. Please give some 
 
 [2] Bello GA, Dawes TJW, Duan J, Biffi C, de Marvao A, Howard LSGE, Gibbs JSR, Wilkins MR, Cook SA, Rueckert D, O'Regan DP. Deep learning cardiac motion analysis for human survival prediction. *[Nature Machine Intelligence](https://doi.org/10.1038/s42256-019-0019-2)* 1, 95–104 (2019).
 
-# NOTA: 
-
-Se debe ejecutar el archivo `DMACS.py`, se modificó solo para que hiciera el preprocesamiento y la estimación de movimiento sin errores. Para esto debe ubicarse la imágen a probar dentro del directorio `data/subject_?`, si desea probar varias al tiro, crear carpetas para varios sujetos al tiro. La imágen debe estar en formato `.nii` y ser 4D, con tercera coordenada el corte y cuarta el tiempo.
