@@ -93,4 +93,4 @@ If you find this software useful for your project or research. Please give some 
 
 # NOTA: 
 
-Se debe ejecutar el archivo `DMACS.py`, se modificó solo para que hiciera el preprocesamiento y la estimación de movimiento.
+Se debe ejecutar el archivo `DMACS.py`, se modificó solo para que hiciera el preprocesamiento y la estimación de movimiento sin errores. Para esto debe ubicarse la imágen a probar dentro del directorio `data/subject_?`, si desea probar varias al tiro, crear carpetas para varios sujetos al tiro. La imágen debe estar en formato `.nii` y ser 4D, con tercera coordenada el corte y cuarta el tiempo.
